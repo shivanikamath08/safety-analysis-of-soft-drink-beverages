@@ -1,0 +1,32 @@
+Brand,Type,Sugar(g/100ml),Caffeine(mg/100ml),Artificial Sweeteners,Artificial Colourants,Safe/Unsafe,Manufacturer Location
+Appy Fizz,Apple drink,8,0,No,No,Safe,India
+Tropicana orange juice,Fruit juice,9.3,0,No,No,Safe,India
+Paper boat,Fruit drink,6.5,0,No,No,Safe,India
+Real fruit juice,Fruit juice,9,0,No,No,Safe,India
+Coconut water(packaged),Natural drink,3,0,No,No,Safe,India
+B-Fizz,Malted drink,9.8,0.5,Yes,Yes,Unsafe,India
+Slice,Mango drink,10,0,Yes,Yes,Unsafe,India
+Thumbs Up,Cola,10,9.9,Yes,Yes,Unsafe,India
+Pepsi,Cola,11,9.6,Yes,Yes,Unsafe,India
+Coca-Cola,Cola,10.6,9.9,Yes,Yes,Unsafe,India
+Mountain Dew,Citrus cola,11.7,9.6,No,Yes,Unsafe,India
+Fanta,Orange soda,9.5,0,No,Yes,Unsafe,India
+7 Up,Lemon lime soda,8,0,No,Yes,Unsafe,India
+Bovonto,Grape soda,6,0,No,No,Safe,India
+Limca,Lemon soda,9,0,No,Yes,Unsafe,India
+Lipton Ice tea,Iced tea,5,0,No,No,Safe,India
+Jaljeera,Spiced drink,2.5,0,No,No,Safe,India
+Nandini ,Buttermilk,1.5,0,No ,No,Safe,India
+Amul,Milk drinks,8.5,15,No,No,Safe,India
+Red Bull,Energy drink,11,32,Yes,Yes,Unsafe,Australia
+Monster Energy,Energy drink,10.5,36,Yes,Yes,Unsafe,USA
+Patanjali Juice,Herbal Juice,2.3,0,No,No,Safe,India
+Himalaya Ashvagandha,Herbal Juice,2,0,No,No,Safe,India
+Yakult,Probiotic Drink,11,0,No,No,Safe,India
+Mirinda,Orange soda,10,0,Yes,Yes,Unsafe,India
+Maaza,Mango drink,12,0,Yes,Yes,Unsafe,India
+Raw Pressery,Cold-pressed Juice,6.2,0,No,No,Safe,India
+Dabur Real,Mixed Fruit Juice,8.6,0,No,No,Safe,India
+Bru cold coffee,Coffee drink,10,20,No,No,Safe,India
+Starbucks Cold Crew,Coffee drink,0,20,No,No,Safe,India
+RC Cola,Cola,10.5,10,Yes,Yes,Unsafe,India

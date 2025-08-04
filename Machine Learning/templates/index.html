@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverage Safety Checker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f6d365, #fda085);
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .form-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            font-size: 16px;
+            width: 300px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        input[type="submit"] {
+            padding: 12px 25px;
+            background: linear-gradient(to right, #43e97b, #38f9d7);
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #11998e, #38ef7d);
+        }
+
+        .details {
+            background: #fff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            margin-top: 20px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .details h3 {
+            margin-top: 0;
+            color: #4a148c;
+        }
+
+        .details p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .status {
+            font-weight: bold;
+            font-size: 18px;
+            color: #00695c;
+        }
+
+        p {
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍹 Beverage Safety Checker</h1>
+        <div class="form-container">
+            <form method="POST">
+                <input type="text" name="drink_name" placeholder="Enter the drink name" required>
+                <input type="submit" value="Check Safety">
+            </form>
+        </div>
+
+        {% if beverage_details %}
+            {% if beverage_details == '❌ Drink not found in the database.' %}
+                <p>{{ beverage_details }}</p>
+            {% else %}
+                {% for beverage in beverage_details %}
+                    <div class="details">
+                        <h3>Drink: {{ beverage.brand }}</h3>
+                        <p><strong>Type:</strong> {{ beverage.type }}</p>
+                        <p><strong>Sugar:</strong> {{ beverage.sugar }} g/100ml</p>
+                        <p><strong>Caffeine:</strong> {{ beverage.caffeine }} mg/100ml</p>
+                        <p><strong>Artificial Sweeteners:</strong> {{ beverage.sweeteners }}</p>
+                        <p><strong>Artificial Colourants:</strong> {{ beverage.colourants }}</p>
+                        <p><strong>Manufacturer Location:</strong> {{ beverage.location }}</p>
+                        <p class="status"> Predicted Safety Status: {{ beverage.status }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
